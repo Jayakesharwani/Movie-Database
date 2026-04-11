@@ -1,32 +1,100 @@
 .container {
   padding: 20px;
+  background-color: #0f172a;
+  min-height: 100vh;
+  color: #ffffff;
 }
 
+/* MOVIE GRID */
 .movies-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
 }
 
+/* PAGINATION */
 .pagination {
-  text-align: center;
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
 }
 
+.pagination button {
+  padding: 8px 16px;
+  background-color: #1e293b;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #334155;
+  transform: scale(1.05);
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* FAILURE VIEW */
+.failure-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.failure-view button {
+  padding: 10px 20px;
+  background-color: #ef4444;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+/* 🔥 RESPONSIVENESS */
+
+/* Tablets */
 @media (max-width: 992px) {
   .movies-list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .movies-list {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .pagination {
+    gap: 10px;
+  }
+
+  .pagination button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
   .movies-list {
     grid-template-columns: 1fr;
+  }
+
+  .pagination span {
+    font-size: 14px;
   }
 }

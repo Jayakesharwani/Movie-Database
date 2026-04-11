@@ -33,28 +33,44 @@ const MovieDetails = props => {
   }, [id])
 
   return (
-    <div className="container">
+    <div className="movie-details-container">
       {status === API_STATUS.IN_PROGRESS && <Loader />}
 
       {status === API_STATUS.FAILURE && (
-        <button type="button" onClick={() => window.location.reload()}>
-          Retry
-        </button>
+        <div className="error-view">
+          <button type="button" onClick={() => window.location.reload()}>
+            Retry
+          </button>
+        </div>
       )}
 
       {status === API_STATUS.SUCCESS && movie && (
         <>
-          <h1>{movie.title}</h1>
-          <img src={IMG_URL + movie.poster_path} alt="" />
-          <p>{movie.overview}</p>
+          <div className="movie-header">
+            <img
+              src={IMG_URL + movie.poster_path}
+              alt={movie.title}
+              className="movie-poster"
+            />
 
-          <h2>Cast</h2>
-          <ul className="movies-list">
+            <div className="movie-info">
+              <h1 className="movie-title">{movie.title}</h1>
+              <p className="movie-overview">{movie.overview}</p>
+            </div>
+          </div>
+
+          <h2 className="cast-heading">Top Cast</h2>
+
+          <ul className="cast-list">
             {cast.slice(0, 10).map(c => (
-              <li key={c.id}>
-                <img src={IMG_URL + c.profile_path} alt="" />
-                <p>{c.name}</p>
-                <p>{c.character}</p>
+              <li key={c.id} className="cast-card">
+                <img
+                  src={IMG_URL + c.profile_path}
+                  alt={c.name}
+                  className="cast-img"
+                />
+                <p className="cast-name">{c.name}</p>
+                <p className="cast-character">{c.character}</p>
               </li>
             ))}
           </ul>

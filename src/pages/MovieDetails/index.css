@@ -1,32 +1,139 @@
-.container {
+.movie-details-container {
   padding: 20px;
+  background-color: #0f172a;
+  min-height: 100vh;
+  color: #ffffff;
 }
 
-.movies-list {
+/* HEADER SECTION */
+.movie-header {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.movie-poster {
+  width: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.movie-info {
+  flex: 1;
+}
+
+.movie-title {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.movie-overview {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+/* CAST SECTION */
+.cast-heading {
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+.cast-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
 }
 
-.pagination {
+.cast-card {
+  background-color: #1e293b;
+  padding: 10px;
+  border-radius: 10px;
   text-align: center;
-  margin-top: 20px;
+  transition: transform 0.3s ease;
 }
 
+.cast-card:hover {
+  transform: scale(1.05);
+}
+
+.cast-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cast-name {
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+.cast-character {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* ERROR */
+.error-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.error-view button {
+  padding: 10px 20px;
+  background-color: #ef4444;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+/* 🔥 RESPONSIVENESS */
+
+/* Tablets */
 @media (max-width: 992px) {
-  .movies-list {
+  .movie-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .movie-poster {
+    width: 200px;
+  }
+
+  .cast-list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
-  .movies-list {
+  .movie-title {
+    font-size: 24px;
+  }
+
+  .movie-overview {
+    font-size: 14px;
+  }
+
+  .cast-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
-  .movies-list {
+  .cast-list {
     grid-template-columns: 1fr;
+  }
+
+  .movie-poster {
+    width: 150px;
   }
 }

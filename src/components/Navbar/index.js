@@ -24,11 +24,13 @@ const Navbar = () => {
       </div>
 
       <div className="search-container">
+        
         <input
-          className="search-input"
-          value={search}
-          onChange={e => setSearch(e.target.value)}
-        />
+  className="search-input"
+  placeholder="Search movies..."
+  value={search}
+  onChange={e => setSearch(e.target.value)}
+/>
         <button type="button" className="search-btn" onClick={onSearch}>
           Search
         </button>
