@@ -30,7 +30,7 @@
   background: transparent;
   border: none;
 
-  color: #e5e5e5;   /* softer Netflix gray */
+  color: #e5e5e5; /* softer Netflix gray */
   transition: color 0.3s ease, transform 0.2s ease;
 }
 

@@ -9,7 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- background-color: #141414;
+  background-color: #141414;
   color: #ffffff;
 }
 
@@ -22,5 +22,3 @@ body {
   min-height: 100vh;
   background-color: #0f172a;
 }
- 
- 

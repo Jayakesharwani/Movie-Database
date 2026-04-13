@@ -6,9 +6,7 @@
   border-radius: 8px;
   overflow: hidden;
   background-color: #1c1c1c;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* ================= IMAGE ================= */
