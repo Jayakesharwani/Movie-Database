@@ -1,0 +1,109 @@
+/* ================= MAIN PAGE ================= */
+.route-page-body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #141414, #000000);
+  padding: 30px 40px;
+}
+
+/* ================= MOVIE LIST ================= */
+.route-page-body ul {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ================= EMPTY VIEW ================= */
+.empty-view-container {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+}
+
+.empty-view-container h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.empty-view-container p {
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+/* ================= LOADER ================= */
+.loader-container {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= LARGE DEVICES ================= */
+@media (max-width: 1200px) {
+  .route-page-body ul {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 992px) {
+  .route-page-body {
+    padding: 25px 20px;
+  }
+
+  .route-page-body ul {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+}
+
+/* ================= SMALL TABLET ================= */
+@media (max-width: 768px) {
+  .route-page-body ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .empty-view-container h1 {
+    font-size: 22px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 576px) {
+  .route-page-body ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 420px) {
+  .route-page-body {
+    padding: 20px 10px;
+  }
+
+  .route-page-body ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .empty-view-container h1 {
+    font-size: 18px;
+  }
+
+  .empty-view-container p {
+    font-size: 12px;
+  }
+}
+.section-title {
+  color: #ffffff;
+  font-size: 22px;
+  margin-bottom: 20px;
+}

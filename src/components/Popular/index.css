@@ -1,0 +1,67 @@
+/* ================= PAGE CONTAINER ================= */
+.route-page-body {
+  min-height: 100vh;
+  padding: 20px 40px;
+
+  background: linear-gradient(to bottom, #141414, #000000);
+}
+
+/* ================= MOVIE GRID ================= */
+ul.row {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* ================= LOADER ================= */
+.loader-container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= SECTION SPACING ================= */
+.mt-3 {
+  margin-top: 20px !important;
+}
+
+/* ================= HOVER SMOOTHNESS ================= */
+ul.row li {
+  transition: transform 0.3s ease;
+}
+
+ul.row li:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 992px) {
+  .route-page-body {
+    padding: 20px;
+  }
+
+  ul.row {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  ul.row {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  ul.row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

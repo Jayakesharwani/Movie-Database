@@ -1,0 +1,62 @@
+/* ================= PAGE CONTAINER ================= */
+.route-page-body {
+  background: linear-gradient(to bottom, #141414, #000000);
+  min-height: 100vh;
+  padding: 20px 40px;
+}
+
+/* ================= MOVIE GRID ================= */
+.movie-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* ================= MOVIE CARD HOVER ================= */
+.movie-grid li {
+  transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+.movie-grid li:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+/* ================= LOADER ================= */
+.loader-container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 992px) {
+  .route-page-body {
+    padding: 20px;
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}

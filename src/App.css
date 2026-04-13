@@ -9,18 +9,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-:root {
-  --primary: #e50914;
-  --bg-dark: #0f0f0f;
-  --card-bg: #1c1c1c;
-  --text-light: #ffffff;
-  --text-muted: #b3b3b3;
+ background-color: #141414;
+  color: #ffffff;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 20px;
-  padding: 20px;
+.App {
+  min-height: 100vh;
 }
+
+.route-page-body {
+  padding: 20px 40px;
+  min-height: 100vh;
+  background-color: #0f172a;
+}
+ 
+ 
